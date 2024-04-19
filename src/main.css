@@ -1,0 +1,13 @@
+.image-container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.image-404{
+    margin-bottom: 30px;
+}
+.img-inicio{
+    width: 100%;
+}

@@ -12,7 +12,7 @@ const Inicio = () => {
           </div>
           <div className='col-lg-8'>
             <div className='image-container'>
-              <img src='' alt='Pokeball' className='img-inicio' />
+              <img src='../src/assets/images/iniciales.png' alt='Pokeball' className='img-inicio' />
             </div>
             <Link className='btn btn-warning btn-xl' to='./galeria'>¡Atrapalos Ya!</Link>
           </div>
