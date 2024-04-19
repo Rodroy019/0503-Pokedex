@@ -7,7 +7,7 @@ const Inicio = () => {
       <div className='container px-4 px-lg-5'>
         <div className='row align-items-center justify-content-center text-center'>
           <div className='col-lg-8 align-self-end'>
-            <h1 className='text-black mt-5'>¡Bienvenido Maestro Pokemon!</h1>
+            <h1 className='text-white mt-5 neon'>¡Bienvenido Maestro Pokemon!</h1>
             <hr className='divider' />
           </div>
           <div className='col-lg-8'>

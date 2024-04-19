@@ -1,3 +1,18 @@
+body {
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ), url('assets/images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: whitesmoke;
+  }
+.neon:hover {
+    text-shadow: 0 0 5px #f4f003, 0 0 15px #f4f003, 0 0 25px #f4f003, 0 0 100px #f4f003;
+}
 .image-container {
     margin: 50px;
     display: flex;
