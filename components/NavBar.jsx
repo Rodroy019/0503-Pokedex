@@ -5,7 +5,10 @@ const NavBar = () => {
   return (
     <Navbar expand='lg' bg='danger' data-bs-theme='light'>
       <Container>
-        <Navbar.Brand href=''><i className='fa-solid fa-cake-candles' /> POKEMON  <i className='fa-solid fa-cake-candles' /></Navbar.Brand>
+        <Navbar.Brand href=''>
+          <img src='../src/assets/images/pokeball.png' height='90' className='d-inline-block align-top' alt='Logo' />
+          <img src='../src/assets/images/pokemon.png' height='90' className='d-inline-block align-top' alt='Logo' />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
