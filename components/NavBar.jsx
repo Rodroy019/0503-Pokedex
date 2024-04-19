@@ -1,9 +1,11 @@
 import { Nav, Navbar, Container } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
+  const HandleMenu = ({ isActive }) => isActive ? 'nav-item nav-link neon active' : 'nav-item nav-link neon'
+
   return (
-    <Navbar expand='lg' bg='success' data-bs-theme='light'>
+    <Navbar expand='lg' bg='danger' data-bs-theme='light'>
       <Container>
         <Navbar.Brand href=''>
           <img src='../src/assets/images/pokemon.png' height='80' className='d-inline-block align-top' alt='Logo' />
@@ -11,12 +13,12 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
-            <Link className='nav-item nav-link neon' to='./'>
+            <NavLink className={HandleMenu} to='./'>
               <img src='../src/assets/images/pokeball.png' height='40' className='d-inline-block' alt='Logo' /> Inicio
-            </Link>
-            <Link className='nav-item nav-link neon' to='./galeria'>
+            </NavLink>
+            <NavLink className={HandleMenu} to='./galeria'>
               <img src='../src/assets/images/pokedex.png' height='40' className='d-inline-block' alt='Logo' /> Pokedex
-            </Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
