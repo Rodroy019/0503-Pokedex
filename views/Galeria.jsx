@@ -1,6 +1,7 @@
 const Galeria = () => {
   return (
     <>
+      galeria
     </>
   )
 }
