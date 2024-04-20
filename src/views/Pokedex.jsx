@@ -1,21 +1,21 @@
-import { useNavigate } from 'react-router-dom'
+import { PokemonChosen } from '../context/PokemonChosen'
+import { useContext } from 'react'
 
-const Pokedex = ({ pokemon }) => {
+const Pokedex = () => {
+  const { pokemon } = useContext(PokemonChosen)
+  console.log('estoy en pokedex')
   console.log(pokemon)
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
-  const HandleClick = () => {
-    navigate(`/pokemones/${pokemon}`)
-  }
+  // const HandleClick = () => {
+  //   navigate(`/pokemones/${pokemonChoose}`)
+  // }
 
   return (
     <div className='image-container'>
       <h1>Pokedex</h1>
       <p>Elijie uno</p>
-      <select>
-        <option>{pokemon}</option>
-      </select>
-      <button onClick={HandleClick}>Apretame</button>
+
     </div>
   )
 }
