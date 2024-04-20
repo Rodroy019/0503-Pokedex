@@ -1,12 +1,16 @@
-import NavBar from '../components/NavBar'
-import Rutas from '../routes/index'
+import NavBar from '../src/components/NavBar'
+import Rutas from '../src/routes/index'
+import React from 'react'
+import PokemonChosenProvider from '../src/context/PokemonChosen'
 
 const App = () => {
   return (
-    <>
-      <NavBar />
-      <Rutas />
-    </>
+    <PokemonChosenProvider>
+      <div>
+        <NavBar />
+        <Rutas />
+      </div>
+    </PokemonChosenProvider>
   )
 }
 
