@@ -1,21 +1,27 @@
+import React, { useContext } from 'react'
 import { PokemonChosen } from '../context/PokemonChosen'
-import { useContext } from 'react'
+import Button from 'react-bootstrap/Button'
 
 const Pokedex = () => {
-  const { pokemon } = useContext(PokemonChosen)
-  console.log('estoy en pokedex')
-  console.log(pokemon)
-  // const navigate = useNavigate()
+  const { pokemones } = useContext(PokemonChosen)
 
-  // const HandleClick = () => {
-  //   navigate(`/pokemones/${pokemonChoose}`)
-  // }
+  const handleSelect = (e) => {
+    const selectedPokemonName = e.target.value
+    console.log('Pokemon seleccionado:', selectedPokemonName)
+  }
 
   return (
     <div className='image-container'>
-      <h1>Pokedex</h1>
-      <p>Elijie uno</p>
-
+      <h3>Selecciona un Pokémon</h3>
+      <select id='pokemonSelect' onChange={handleSelect}>
+        <option value=''>Selecciona un Pokémon</option>
+        {pokemones.map(poke => (
+          <option key={poke.name} value={poke.name}>
+            {poke.name.toUpperCase()}
+          </option>
+        ))}
+      </select>
+      <Button variant='danger'>¡Atrapalo YA!</Button>
     </div>
   )
 }
