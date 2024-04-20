@@ -1,20 +1,20 @@
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-const CardPokemon = () => {
+const CardPokemon = (props) => {
   return (
     <div className='image-container'>
       <Card style={{ width: '18rem' }}>
         <Card.Img variant='top' src='holder.js/100px180?text=Image cap' />
         <Card.Body>
-          <Card.Title>Nombre: </Card.Title>
+          <Card.Title>Nombre: {props.name} </Card.Title>
           <Card.Text>
-            Descripcion: de .
+            Descripcion: de {props.name}.
           </Card.Text>
         </Card.Body>
         <ListGroup className='list-group-flush'>
-          <ListGroup.Item>Tipo: </ListGroup.Item>
-          <ListGroup.Item>Estadisticas: </ListGroup.Item>
+          <ListGroup.Item>Tipo: {props.name}</ListGroup.Item>
+          <ListGroup.Item>Estadisticas: {props.name}</ListGroup.Item>
         </ListGroup>
       </Card>
 
