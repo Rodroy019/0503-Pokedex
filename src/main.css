@@ -33,3 +33,9 @@ body {
 span{
   font-weight: 900
 }
+
+select{
+  margin: 30px;
+  height: 40px;
+  width: 300px;
+}
