@@ -1,14 +1,15 @@
 import { createContext, useEffect, useState } from 'react'
-const PHOTO_URL = '/photos.json'
+const URL = 'https://pokeapi.co/api/v2/pokemon'
 
 export const PokemonChosen = createContext()
 
 const PokemonChosenProvider = ({ children }) => {
-  const [images, setImages] = useState([])
+  const [pokemon, setPokemon] = useState([])
   const getData = async () => {
-    const response = await fetch(PHOTO_URL)
+    const response = await fetch(URL)
     const data = await response.json()
-    setImages(data.photos)
+    console.log(data)
+    setPokemon(data)
   }
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const PokemonChosenProvider = ({ children }) => {
   }, [])
 
   return (
-    <PokemonChosen.Provider value={{ images, setImages }}>
+    <PokemonChosen.Provider value={{ pokemon, setPokemon }}>
       {children}
     </PokemonChosen.Provider>
 

@@ -1,15 +1,17 @@
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
+import { useParams } from 'react-router-dom'
 
 const Pokemon = () => {
+  const { name } = useParams()
   return (
     <div className='image-container'>
       <Card style={{ width: '18rem' }}>
         <Card.Img variant='top' src='holder.js/100px180?text=Image cap' />
         <Card.Body>
-          <Card.Title>Nombre: Pokemon</Card.Title>
+          <Card.Title>Nombre: {name}</Card.Title>
           <Card.Text>
-            Descripcion: Pokemon.
+            Descripcion: de {name}.
           </Card.Text>
         </Card.Body>
         <ListGroup className='list-group-flush'>
