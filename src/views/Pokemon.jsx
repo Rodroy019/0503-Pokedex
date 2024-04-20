@@ -6,7 +6,7 @@ const Pokemon = () => {
   return (
     <div className='image-container'>
       <h4>Tu pokemon es: {name.toUpperCase()}</h4>
-      <CardPokemon name={name.toUpperCase()} />
+      <CardPokemon />
     </div>
   )
 }

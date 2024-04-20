@@ -10,10 +10,7 @@ const PokemonChosenProvider = ({ children }) => {
     try {
       const response = await fetch(URL)
       const data = await response.json()
-      console.log('estoy en context')
-      console.log(data.results)
       setPokemones(data.results)
-      console.log(pokemones)
     } catch (error) {
       console.log(error)
     }
