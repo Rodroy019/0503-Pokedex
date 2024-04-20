@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { Pokedex, Inicio, NotFound, Galeria } from '../views'
+import { Pokedex, Inicio, NotFound, Pokemon } from '../views'
 
 const Rutas = () => {
   return (
@@ -7,7 +7,7 @@ const Rutas = () => {
       <Routes>
         <Route path='/' element={<Inicio />} />
         <Route path='/pokedex' element={<Pokedex />} />
-        <Route path='/galeria' element={<Galeria />} />
+        <Route path='/pokemon/:name' element={<Pokemon />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>
