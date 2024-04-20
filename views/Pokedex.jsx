@@ -6,11 +6,11 @@ const Pokedex = () => {
   const navigate = useNavigate()
 
   const HandleClick = () => {
-    if (pokemon.trim === '') return
+    if (pokemon.trim() === '') return
     navigate(`/pokemon/${pokemon}`)
   }
   return (
-    <div>
+    <div className='image-container'>
       <h1>Pokedex</h1>
       <p>Elijie uno</p>
       <input type='text' value={pokemon} onChange={(e) => setPokemon(e.target.value)} />
