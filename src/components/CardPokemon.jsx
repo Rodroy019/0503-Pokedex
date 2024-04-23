@@ -37,33 +37,44 @@ const CardPokemon = () => {
   return (
     <div className='image-container'>
       {pokemon && (
-        <Card style={{ width: '25rem' }}>
-          <Card.Img variant='top' src={pokemon.img} alt={name} />
-          <Card.Body>
-            <Card.Title>Nombre: {name.toUpperCase()}</Card.Title>
-            <Card.Text>
-              Posición en Pokédex: <span>{pokemon.id}</span>
-            </Card.Text>
-          </Card.Body>
-          <ListGroup className='list-group-flush'>
-            <ListGroup.Item>
-              Tipo:
-              <ul>
-                {pokemon.types.map((type) => (
-                  <li key={type}>{type}</li>
-                ))}
-              </ul>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Habilidades:
-              <ul>
-                {pokemon.abilities.map((ability) => (
-                  <li key={ability}>{ability}</li>
-                ))}
-              </ul>
-            </ListGroup.Item>
-          </ListGroup>
+        <Card style={{ width: '50rem' }}>
+          <div className='row'>
+            <div className='col-6'>
+              <Card.Img
+                variant='top'
+                src={pokemon.img}
+                style={{ objectFit: 'cover', height: '100%' }}
+              />
+            </div>
+            <div className='col-6'>
+              <Card.Body>
+                <Card.Title className='text-capitalize'>Nombre: {name}</Card.Title>
+                <Card.Text>
+                  Posición en Pokédex: <span>{pokemon.id}</span>
+                </Card.Text>
+              </Card.Body>
+              <ListGroup className='list-group-flush'>
+                <ListGroup.Item>
+                  Tipo:
+                  <ul>
+                    {pokemon.types.map((type) => (
+                      <li key={type} className='text-capitalize'>{type}</li>
+                    ))}
+                  </ul>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  Habilidades:
+                  <ul>
+                    {pokemon.abilities.map((ability) => (
+                      <li key={ability} className='text-capitalize'>{ability}</li>
+                    ))}
+                  </ul>
+                </ListGroup.Item>
+              </ListGroup>
+            </div>
+          </div>
         </Card>
+
       )}
       {!pokemon && <div>Cargando información del Pokémon...</div>}
     </div>
